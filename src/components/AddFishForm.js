@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 
+const INITIAL_STATE = {
+  name: '',
+  price: '',
+  status: '',
+  desc: '',
+  image: '',
+};
+
 class AddFishForm extends Component {
-  state = {
-    name: '',
-    price: '',
-    status: '',
-    desc: '',
-    image: '',
-  };
+  state = INITIAL_STATE;
 
   formOnChange = (event) => {
     const {
@@ -40,6 +42,7 @@ class AddFishForm extends Component {
     };
 
     addFish(fish);
+    this.setState(INITIAL_STATE);
   }
 
   render() {
