@@ -1,6 +1,6 @@
 // This is just some sample data so you don't have to think of your own!
-const fishes = {
-  fish1: {
+const fishes = [
+  {
     name: "Pacific Halibut",
     image: "/images/hali.jpg",
     desc:
@@ -8,8 +8,7 @@ const fishes = {
     price: 1724,
     status: "available"
   },
-
-  fish2: {
+  {
     name: "Lobster",
     image: "/images/lobster.jpg",
     desc:
@@ -17,8 +16,7 @@ const fishes = {
     price: 3200,
     status: "available"
   },
-
-  fish3: {
+  {
     name: "Sea Scallops",
     image: "/images/scallops.jpg",
     desc:
@@ -26,8 +24,7 @@ const fishes = {
     price: 1684,
     status: "unavailable"
   },
-
-  fish4: {
+  {
     name: "Mahi Mahi",
     image: "/images/mahi.jpg",
     desc:
@@ -35,8 +32,7 @@ const fishes = {
     price: 1129,
     status: "available"
   },
-
-  fish5: {
+  {
     name: "King Crab",
     image: "/images/crab.jpg",
     desc:
@@ -44,8 +40,7 @@ const fishes = {
     price: 4234,
     status: "available"
   },
-
-  fish6: {
+  {
     name: "Atlantic Salmon",
     image: "/images/salmon.jpg",
     desc:
@@ -53,16 +48,14 @@ const fishes = {
     price: 1453,
     status: "available"
   },
-
-  fish7: {
+  {
     name: "Oysters",
     image: "/images/oysters.jpg",
     desc: "A soft plump oyster with a sweet salty flavor and a clean finish.",
     price: 2543,
     status: "available"
   },
-
-  fish8: {
+  {
     name: "Mussels",
     image: "/images/mussels.jpg",
     desc:
@@ -70,15 +63,14 @@ const fishes = {
     price: 425,
     status: "available"
   },
-
-  fish9: {
+  {
     name: "Jumbo Prawns",
     image: "/images/prawns.jpg",
     desc:
       "With 21-25 two bite prawns in each pound, these sweet morsels are perfect for shish-kabobs.",
     price: 2250,
     status: "available"
-  }
-};
+  },
+];
 
 export default fishes;
