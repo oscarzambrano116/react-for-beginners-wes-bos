@@ -33,6 +33,7 @@ class App extends Component {
   render() {
     const {
       fishes,
+      orders,
     } = this.state;
 
     return (
@@ -52,7 +53,10 @@ class App extends Component {
             }
           </ul>
         </div>
-        <Order />
+        <Order
+          orders={orders}
+          fishes={fishes}
+        />
         <Inventory
           addFish={this.addFish}
           loadSampleFishes={this.loadSampleFishes}

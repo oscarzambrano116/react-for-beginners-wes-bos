@@ -1,8 +1,8 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { formatPrice } from '../helpers';
 
-class Fish extends PureComponent {
+class Fish extends Component {
   handleClick = () => {
     const {
       addToOrder,
