@@ -8,20 +8,26 @@ import sampleFishes from '../sample-fishes';
 
 class App extends Component {
   state = {
-    fishes: [],
-    orders: [],
+    fishes: {},
+    orders: {},
   };
 
   addFish = (fish) => {
-    this.setState((prevState) => ({
-      fishes: [...prevState.fishes, fish],
-    }));
+    const fishes = { ...this.state.fishes };
+    fishes[`fish${Date.now()}`] = fish;
+    this.setState({ fishes });
   }
 
   loadSampleFishes = () => {
     this.setState({
       fishes: sampleFishes,
     });
+  }
+
+  addToOrder = (key) => {
+    const orders = { ...this.state.orders };
+    orders[key] = orders[key] + 1 || 1;
+    this.setState({ orders });
   }
 
   render() {
@@ -35,10 +41,12 @@ class App extends Component {
           <Header tagline={'Fresh Seafood Market'}/>
           <ul className="fishes">
             {
-              fishes.map((item) => (
+              Object.keys(fishes).map((key) => (
                 <Fish
-                  key={item.id}
-                  {...item}
+                  key={key}
+                  index={key}
+                  {...fishes[key]}
+                  addToOrder={this.addToOrder}
                 />
               ))
             }

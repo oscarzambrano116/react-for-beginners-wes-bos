@@ -1,7 +1,6 @@
 // This is just some sample data so you don't have to think of your own!
-const fishes = [
-  {
-    id: 1,
+const fishes = {
+  fish1: {
     name: "Pacific Halibut",
     image: "/images/hali.jpg",
     desc:
@@ -9,8 +8,8 @@ const fishes = [
     price: 1724,
     status: "available"
   },
-  {
-    id: 2,
+
+  fish2: {
     name: "Lobster",
     image: "/images/lobster.jpg",
     desc:
@@ -18,8 +17,8 @@ const fishes = [
     price: 3200,
     status: "available"
   },
-  {
-    id: 3,
+
+  fish3: {
     name: "Sea Scallops",
     image: "/images/scallops.jpg",
     desc:
@@ -27,8 +26,8 @@ const fishes = [
     price: 1684,
     status: "unavailable"
   },
-  {
-    id: 4,
+
+  fish4: {
     name: "Mahi Mahi",
     image: "/images/mahi.jpg",
     desc:
@@ -36,8 +35,8 @@ const fishes = [
     price: 1129,
     status: "available"
   },
-  {
-    id: 5,
+
+  fish5: {
     name: "King Crab",
     image: "/images/crab.jpg",
     desc:
@@ -45,8 +44,8 @@ const fishes = [
     price: 4234,
     status: "available"
   },
-  {
-    id: 6,
+
+  fish6: {
     name: "Atlantic Salmon",
     image: "/images/salmon.jpg",
     desc:
@@ -54,16 +53,16 @@ const fishes = [
     price: 1453,
     status: "available"
   },
-  {
-    id: 7,
+
+  fish7: {
     name: "Oysters",
     image: "/images/oysters.jpg",
     desc: "A soft plump oyster with a sweet salty flavor and a clean finish.",
     price: 2543,
     status: "available"
   },
-  {
-    id: 8,
+
+  fish8: {
     name: "Mussels",
     image: "/images/mussels.jpg",
     desc:
@@ -71,15 +70,15 @@ const fishes = [
     price: 425,
     status: "available"
   },
-  {
-    id: 9,
+
+  fish9: {
     name: "Jumbo Prawns",
     image: "/images/prawns.jpg",
     desc:
       "With 21-25 two bite prawns in each pound, these sweet morsels are perfect for shish-kabobs.",
     price: 2250,
     status: "available"
-  },
-];
+  }
+};
 
 export default fishes;
