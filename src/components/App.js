@@ -23,6 +23,13 @@ class App extends Component {
       },
     } = this.props;
 
+    const localStorageRef = localStorage.getItem(storeId);
+    if (localStorageRef) {
+      this.setState({
+        order: JSON.parse(localStorageRef),
+      });
+    }
+
     this.ref = base.syncState(`${storeId}/fishes`, {
       context: this,
       state: 'fishes',
@@ -31,6 +38,23 @@ class App extends Component {
 
   componentWillUnmount() {
     base.removeBinding(this.ref);
+  }
+
+  componentDidUpdate() {
+    const {
+      state: {
+        orders,
+      },
+      props: {
+        match: {
+          params: {
+            storeId,
+          },
+        },
+      }
+    } = this;
+
+    localStorage.setItem(storeId, JSON.stringify(orders));
   }
 
   addFish = (fish) => {

@@ -11,7 +11,8 @@ class Order extends Component {
 
     const fish = fishes[key];
     const count = orders[key];
-    const isAvailable = fish.status === 'available';
+    const isAvailable = fish && fish.status === 'available';
+    if (!fish) return null;
 
     if (!isAvailable) {
       return (
