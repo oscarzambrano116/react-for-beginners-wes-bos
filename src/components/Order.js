@@ -4,6 +4,12 @@ import { formatPrice } from '../helpers';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 class Order extends Component {
+  static propTypes = {
+    orders: PropTypes.object,
+    fishes: PropTypes.object,
+    removeFromOrder: PropTypes.func.isRequired,
+  };
+
   renderOrder = (key) => {
     const {
       fishes,
@@ -88,9 +94,5 @@ class Order extends Component {
     );
   }
 }
-
-Order.propTypes = {
-  orders: PropTypes.object,
-};
 
 export default Order;

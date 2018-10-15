@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 const INITIAL_STATE = {
   name: '',
@@ -10,6 +11,10 @@ const INITIAL_STATE = {
 
 class AddFishForm extends Component {
   state = INITIAL_STATE;
+
+  static propTypes = {
+    addFish: PropTypes.func.isRequired,
+  }
 
   formOnChange = (event) => {
     const {

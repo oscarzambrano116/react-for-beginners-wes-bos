@@ -3,6 +3,15 @@ import PropTypes from 'prop-types';
 import { formatPrice } from '../helpers';
 
 class Fish extends Component {
+  static propTypes = {
+    image: PropTypes.string,
+    name: PropTypes.string,
+    price: PropTypes.number,
+    desc: PropTypes.string,
+    status: PropTypes.string,
+    addToOrder: PropTypes.func.isRequired,
+  };
+
   handleClick = () => {
     const {
       addToOrder,
@@ -40,13 +49,5 @@ class Fish extends Component {
     );
   }
 }
-
-Fish.propTypes = {
-  image: PropTypes.string,
-  name: PropTypes.string,
-  price: PropTypes.number,
-  desc: PropTypes.string,
-  status: PropTypes.string,
-};
 
 export default Fish;
