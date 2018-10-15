@@ -9,6 +9,7 @@ class Inventory extends Component {
       loadSampleFishes,
       fishes,
       updatedFish,
+      deleteFish,
     } = this.props;
 
     return (
@@ -21,6 +22,7 @@ class Inventory extends Component {
               index={key}
               fish={fishes[key]}
               updatedFish={updatedFish}
+              deleteFish={deleteFish}
             />
           ))
         }

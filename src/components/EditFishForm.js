@@ -22,6 +22,15 @@ class EditFishForm extends Component {
     updatedFish(index, updatedFishData);
   }
 
+  handleDeleteFish = () => {
+    const {
+      deleteFish,
+      index,
+    } = this.props;
+
+    deleteFish(index);
+  }
+
   render() {
     const {
       fish: {
@@ -43,6 +52,7 @@ class EditFishForm extends Component {
         </select>
         <textarea type="text" name="desc" onChange={this.handleChange} value={desc}/>
         <input type="text" name="image" onChange={this.handleChange} value={image} />
+        <button onClick={this.handleDeleteFish}>Remove Fish</button>
       </div>
     );
   }
