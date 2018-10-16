@@ -104,6 +104,14 @@ class App extends Component {
       orders,
     } = this.state;
 
+    const {
+      match: {
+        params: {
+          storeId,
+        },
+      },
+    } = this.props;
+
     return (
       <div className="catch-of-the-day">
         <div className="menu">
@@ -132,6 +140,7 @@ class App extends Component {
           deleteFish={this.deleteFish}
           loadSampleFishes={this.loadSampleFishes}
           fishes={fishes}
+          storeId={storeId}
         />
       </div>
     );

@@ -51,7 +51,7 @@ class Order extends Component {
                 <span>{count}</span>
               </CSSTransition>
             </TransitionGroup>
-            lbs {fish.name}
+            lbs {fish.name} 
             {formatPrice(count * fish.price)}
             <button onClick={() => removeFromOrder(key)}>&times;</button>
           </span>

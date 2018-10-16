@@ -11,7 +11,7 @@ class EditFishForm extends Component {
       price: PropTypes.number,
     }),
     index: PropTypes.string,
-    updateFish: PropTypes.func.isRequired,
+    updatedFish: PropTypes.func.isRequired,
   };
 
   handleChange = (event) => {
